@@ -10,7 +10,7 @@ class BlockFieldValue extends Model
 {
     protected $table = 'block_field_values';
     public function itineraryblock(){
-        return $this->belongsTo(ItinerariyBlocks::class);
+        return $this->belongsTo(ItinerariyBlocks::class,'itinerary_block_id');
     }
 
     // public function templatefields(){
@@ -18,7 +18,7 @@ class BlockFieldValue extends Model
     // }
 
     public function templatefield(){
-        return $this->belongsTo(TemplateField::class);
+        return $this->belongsTo(TemplateField::class, 'template_field_id');//penyebab error
     }
 
 }

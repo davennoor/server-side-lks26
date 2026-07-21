@@ -108,7 +108,7 @@ class ItineraryController extends Controller
                         ],
                         'fields'   => $block->blockfieldvalue->map(function ($fieldValue) {
                             return [
-                                'id'    => $fieldValue->id,
+                                'id'    => $fieldValue->templateField->id,
                                 'name'  => $fieldValue->templateField->name,
                                 'slug'  => $fieldValue->templateField->slug,
                                 'type'  => $fieldValue->templateField->type,
